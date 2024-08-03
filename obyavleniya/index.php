@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Мои объявления");
+$APPLICATION->SetTitle("Объявления");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"",
@@ -49,9 +49,9 @@ $APPLICATION->SetTitle("Мои объявления");
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_FOLDER" => "/lichnyy-kabinet-prodavtsa/moi-obyavleniya/news/",
+		"SEF_FOLDER" => "/obyavleniya/",
 		"SEF_MODE" => "Y",
-		"SEF_URL_TEMPLATES" => Array("detail"=>"/#ELEMENT_CODE#/","news"=>"","section"=>""),
+		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_CODE#/","news"=>"","section"=>""),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
@@ -69,4 +69,4 @@ $APPLICATION->SetTitle("Мои объявления");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N"
 	)
-);?>Text here....<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
