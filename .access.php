@@ -1,4 +1,12 @@
 <?
+$PERM["urlrewrite.php"]["8"]="W";
+$PERM["vac.xml"]["8"]="W";
+$PERM["sec.xml"]["8"]="W";
+$PERM["prod.xml"]["8"]="W";
+$PERM["news.xml"]["8"]="W";
+$PERM["index.php"]["8"]="W";
+$PERM["index.php"]["5"]="W";
+$PERM[".top.menu.php"]["8"]="W";
 $PERM[".bottom.menu.php"]["8"]="W";
 $PERM["services"]["8"]="W";
 $PERM["services"]["5"]="W";
@@ -25,6 +33,5 @@ $PERM["lichnyy-kabinet-pokupatelya"]["*"]="D";
 $PERM["lichnyy-kabinet-pokupatelya"]["G6"]="R";
 $PERM["lichnyy-kabinet-pokupatelya"]["G1"]="X";
 $PERM["search"]["5"]="W";
-$PERM["index.php"]["5"]="W";
 $PERM["/"]["*"]="R";
 ?>
