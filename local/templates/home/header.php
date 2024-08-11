@@ -117,7 +117,7 @@ IncludeTemplateLangFile(__FILE__);
 
   <div class="slide-one-item home-slider owl-carousel">
 
-    <div class="site-blocks-cover" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade"
+    <div class="site-blocks-cover" style="background-image: url(local/templates/home/images/hero_bg_1.jpg);" data-aos="fade"
       data-stellar-background-ratio="0.5">
 
       <div class="text">
@@ -131,7 +131,7 @@ IncludeTemplateLangFile(__FILE__);
       </div>
     </div>
 
-    <div class="site-blocks-cover" style="background-image: url(images/hero_bg_3.jpg);" data-aos="fade"
+    <div class="site-blocks-cover" style="background-image: url(local/templates/home/images/hero_bg_3.jpg);" data-aos="fade"
       data-stellar-background-ratio="0.5">
 
       <div class="text">
@@ -198,7 +198,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+              <img src="local/templates/home/images/img_1.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -232,7 +232,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+              <img src="local/templates/home/images/img_2.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -266,7 +266,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="images/img_3.jpg" alt="Image" class="img-fluid">
+              <img src="local/templates/home/images/img_3.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -301,7 +301,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="images/img_4.jpg" alt="Image" class="img-fluid">
+              <img src="local/templates/home/images/img_4.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -335,7 +335,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="images/img_5.jpg" alt="Image" class="img-fluid">
+              <img src="local/templates/home/images/img_5.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -369,7 +369,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="images/img_6.jpg" alt="Image" class="img-fluid">
+              <img src="local/templates/home/images/img_6.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -475,7 +475,7 @@ IncludeTemplateLangFile(__FILE__);
       </div>
       <div class="row">
         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-          <a href="#"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
+          <a href="#"><img src="local/templates/home/images/img_4.jpg" alt="Image" class="img-fluid"></a>
           <div class="p-4 bg-white">
             <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
             <h2 class="h5 text-black mb-3"><a href="#">When To Sell &amp; How Much To Sell?</a></h2>
@@ -484,7 +484,7 @@ IncludeTemplateLangFile(__FILE__);
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-          <a href="#"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
+          <a href="#"><img src="local/templates/home/images/img_2.jpg" alt="Image" class="img-fluid"></a>
           <div class="p-4 bg-white">
             <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
             <h2 class="h5 text-black mb-3"><a href="#">When To Sell &amp; How Much To Sell?</a></h2>
@@ -493,7 +493,7 @@ IncludeTemplateLangFile(__FILE__);
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="300">
-          <a href="#"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
+          <a href="#"><img src="local/templates/home/images/img_3.jpg" alt="Image" class="img-fluid"></a>
           <div class="p-4 bg-white">
             <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
             <h2 class="h5 text-black mb-3"><a href="#">When To Sell &amp; How Much To Sell?</a></h2>
