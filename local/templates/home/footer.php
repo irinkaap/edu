@@ -13,7 +13,7 @@
 
 
         </div>
-        <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="col-lg-4 mb-5 mb-lg-0"> 
           <div class="row mb-5">
             <div class="col-md-12">
               <h3 class="footer-heading mb-4">Navigations</h3>
@@ -72,19 +72,19 @@
 
   </div>
   <? 
-  $APPLICATION->AddHeadScript('js/jquery-3.3.1.min.js');
-  $APPLICATION->AddHeadScript('js/jquery-migrate-3.0.1.min.js');
-  $APPLICATION->AddHeadScript('js/jquery-ui.js');
-  $APPLICATION->AddHeadScript('js/popper.min.js');
-  $APPLICATION->AddHeadScript('js/bootstrap.min.js');
-  $APPLICATION->AddHeadScript('js/owl.carousel.min.js');
-  $APPLICATION->AddHeadScript('js/mediaelement-and-player.min.js');
-  $APPLICATION->AddHeadScript('js/jquery.stellar.min.j');
-  $APPLICATION->AddHeadScript('js/jquery.countdown.min.js');
-  $APPLICATION->AddHeadScript('js/jquery.magnific-popup.min.js');
-  $APPLICATION->AddHeadScript('js/bootstrap-datepicker.min.js');
-  $APPLICATION->AddHeadScript('js/aos.js');
-  $APPLICATION->AddHeadScript('js/main.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/jquery-3.3.1.min.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/jquery-migrate-3.0.1.min.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/jquery-ui.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/popper.min.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/bootstrap.min.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/owl.carousel.min.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/mediaelement-and-player.min.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/jquery.stellar.min.j');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/jquery.countdown.min.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/jquery.magnific-popup.min.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/bootstrap-datepicker.min.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/aos.js');
+  $APPLICATION->AddHeadScript('<?=SITE_TEMPLATE_PATH?>js/main.js');
 
   ?>
 </body>
