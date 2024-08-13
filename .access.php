@@ -1,4 +1,9 @@
 <?
+$PERM["lichnyy-kabinet-prodavtsa"]["8"]="W";
+$PERM["lichnyy-kabinet-prodavtsa"]["*"]="D";
+$PERM["lichnyy-kabinet-prodavtsa"]["7"]="R";
+$PERM["lichnyy-kabinet-pokupatelya"]["8"]="W";
+$PERM["lichnyy-kabinet-pokupatelya"]["*"]="D";
 $PERM["urlrewrite.php"]["8"]="W";
 $PERM["vac.xml"]["8"]="W";
 $PERM["sec.xml"]["8"]="W";
@@ -27,11 +32,6 @@ $PERM["bitrix"]["8"]="D";
 $PERM["bitrix"]["6"]="D";
 $PERM["bitrix"]["7"]="D";
 $PERM["bitrix"]["5"]="D";
-$PERM["lichnyy-kabinet-prodavtsa"]["7"]="R";
-$PERM["lichnyy-kabinet-prodavtsa"]["*"]="D";
-$PERM["lichnyy-kabinet-pokupatelya"]["*"]="D";
-$PERM["lichnyy-kabinet-pokupatelya"]["G6"]="R";
-$PERM["lichnyy-kabinet-pokupatelya"]["G1"]="X";
 $PERM["search"]["5"]="W";
 $PERM["/"]["*"]="R";
 ?>

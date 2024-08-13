@@ -1,10 +1,12 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?
 IncludeTemplateLangFile(__FILE__);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <?$APPLICATION->ShowHead();?>
   <title><?$APPLICATION->ShowTitle()?>  
      HomeSpace &mdash; Colorlib Website Template
@@ -16,19 +18,19 @@ IncludeTemplateLangFile(__FILE__);
     
   <?
   $APPLICATION->SetAdditionalCSS('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>fonts/icomoon/style.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>bootstrap.min.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>css/magnific-popup.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>css/jquery-ui.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>css/owl.carousel.min.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>css/owl.theme.default.min.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>css/bootstrap-datepicker.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>css/mediaelementplayer.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>css/animate.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>fonts/flaticon/font/flaticon.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>css/fl-bigmug-line.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>css/aos.css');
-  $APPLICATION->SetAdditionalCSS('<?=SITE_TEMPLATE_PATH?>css/style.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/fonts/icomoon/style.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/bootstrap.min.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/magnific-popup.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/jquery-ui.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/owl.carousel.min.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/owl.theme.default.min.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/bootstrap-datepicker.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/mediaelementplayer.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/animate.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/fonts/flaticon/font/flaticon.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/fl-bigmug-line.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/aos.css');
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/style.css');
   ?>
 
 </head>
@@ -55,15 +57,41 @@ IncludeTemplateLangFile(__FILE__);
           <div class="col-6 col-md-6">
             <p class="mb-0">
               <a href="#" class="mr-3"><span class="text-black fl-bigmug-line-phone351"></span> <span
-                  class="d-none d-md-inline-block ml-2">+2 102 3923 3922</span></a>
-              <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span
-                  class="d-none d-md-inline-block ml-2">info@domain.com</span></a>
+                  class="d-none d-md-inline-block ml-2">
+                  <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                      "AREA_FILE_SHOW" => "file",
+                      "AREA_FILE_SUFFIX" => "inc",
+                      "EDIT_TEMPLATE" => "standard.php",
+                      "PATH" => "/include/phone.php"
+                    )
+                  );?></span></a>
+              <a href="#"><span class="text-black fl-bigmug-line-email64"></span> 
+                <?$APPLICATION->IncludeComponent(
+                      "bitrix:main.include",
+                      "",
+                      Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "standard.php",
+                        "PATH" => "/include/email.php"
+                      )
+                  );?></a>
             </p>
           </div>
           <div class="col-6 col-md-6 text-right">
-            <a href="#" class="mr-3"><span class="text-black icon-facebook"></span></a>
-            <a href="#" class="mr-3"><span class="text-black icon-twitter"></span></a>
-            <a href="#" class="mr-0"><span class="text-black icon-linkedin"></span></a>
+            <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                          "AREA_FILE_SHOW" => "file",
+                          "AREA_FILE_SUFFIX" => "inc",
+                          "EDIT_TEMPLATE" => "standard.php",
+                          "PATH" => "/include/social_list.php"
+                        )
+              );?>
           </div>
         </div>
       </div>
@@ -73,8 +101,16 @@ IncludeTemplateLangFile(__FILE__);
       <div class="container py-1">
         <div class="row align-items-center">
           <div class="col-8 col-md-8 col-lg-4">
-            <h1 class=""><a href="index.html" class="h5 text-uppercase text-black"><strong>HomeSpace<span
-                    class="text-danger">.</span></strong></a></h1>
+            <h1 class=""><?$APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                Array(
+                  "AREA_FILE_SHOW" => "file",
+                  "AREA_FILE_SUFFIX" => "inc",
+                  "EDIT_TEMPLATE" => "standard.php",
+                  "PATH" => "/include/logo.php"
+                )
+              );?></h1>
           </div>
           <div class="col-4 col-md-4 col-lg-8">
             <nav class="site-navigation text-right text-md-right" role="navigation">
@@ -117,7 +153,7 @@ IncludeTemplateLangFile(__FILE__);
 
   <div class="slide-one-item home-slider owl-carousel">
 
-    <div class="site-blocks-cover" style="background-image: url(<?=SITE_TEMPLATE_PATH?>images/hero_bg_1.jpg);" data-aos="fade"
+    <div class="site-blocks-cover" style="background-image: url(<?=SITE_TEMPLATE_PATH?>/images/hero_bg_1.jpg);" data-aos="fade"
       data-stellar-background-ratio="0.5">
 
       <div class="text">
@@ -131,7 +167,7 @@ IncludeTemplateLangFile(__FILE__);
       </div>
     </div>
 
-    <div class="site-blocks-cover" style="background-image: url(<?=SITE_TEMPLATE_PATH?>images/hero_bg_3.jpg);" data-aos="fade"
+    <div class="site-blocks-cover" style="background-image: url(<?=SITE_TEMPLATE_PATH?>/images/hero_bg_3.jpg);" data-aos="fade"
       data-stellar-background-ratio="0.5">
 
       <div class="text">
@@ -155,31 +191,46 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
           <div class="feature d-flex align-items-start">
             <span class="icon mr-3 flaticon-house"></span>
-            <div class="text">
-              <h2 class="mt-0">Wide Range of Properties</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rem sint debitis porro quae dolorum neque.
-              </p>
-            </div>
+              <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                          "AREA_FILE_SHOW" => "file",
+                          "AREA_FILE_SUFFIX" => "inc",
+                          "EDIT_TEMPLATE" => "standard.php",
+                          "PATH" => "/include/flaticon-house.php"
+                        )
+                );?>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
           <div class="feature d-flex align-items-start">
             <span class="icon mr-3 flaticon-rent"></span>
-            <div class="text">
-              <h2 class="mt-0">Rent or Sale</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rem sint debitis porro quae dolorum neque.
-              </p>
-            </div>
+              <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                          "AREA_FILE_SHOW" => "file",
+                          "AREA_FILE_SUFFIX" => "inc",
+                          "EDIT_TEMPLATE" => "standard.php",
+                          "PATH" => "/include/flaticon-rent.php"
+                        )
+                );?>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
           <div class="feature d-flex align-items-start">
             <span class="icon mr-3 flaticon-location"></span>
-            <div class="text">
-              <h2 class="mt-0">Property Location</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rem sint debitis porro quae dolorum neque.
-              </p>
-            </div>
+              <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                          "AREA_FILE_SHOW" => "file",
+                          "AREA_FILE_SUFFIX" => "inc",
+                          "EDIT_TEMPLATE" => "standard.php",
+                          "PATH" => "/include/flaticon-location.php"
+                        )
+                );?>
           </div>
         </div>
       </div>
@@ -198,7 +249,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>images/img_1.jpg" alt="Image" class="img-fluid">
+              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_1.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -232,7 +283,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>images/img_2.jpg" alt="Image" class="img-fluid">
+              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_2.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -266,7 +317,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>images/img_3.jpg" alt="Image" class="img-fluid">
+              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_3.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -301,7 +352,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>images/img_4.jpg" alt="Image" class="img-fluid">
+              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_4.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -335,7 +386,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>images/img_5.jpg" alt="Image" class="img-fluid">
+              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_5.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -369,7 +420,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>images/img_6.jpg" alt="Image" class="img-fluid">
+              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_6.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -475,7 +526,7 @@ IncludeTemplateLangFile(__FILE__);
       </div>
       <div class="row">
         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-          <a href="#"><img src="<?=SITE_TEMPLATE_PATH?>images/img_4.jpg" alt="Image" class="img-fluid"></a>
+          <a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/images/img_4.jpg" alt="Image" class="img-fluid"></a>
           <div class="p-4 bg-white">
             <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
             <h2 class="h5 text-black mb-3"><a href="#">When To Sell &amp; How Much To Sell?</a></h2>
@@ -484,7 +535,7 @@ IncludeTemplateLangFile(__FILE__);
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-          <a href="#"><img src="<?=SITE_TEMPLATE_PATH?>images/img_2.jpg" alt="Image" class="img-fluid"></a>
+          <a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/images/img_2.jpg" alt="Image" class="img-fluid"></a>
           <div class="p-4 bg-white">
             <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
             <h2 class="h5 text-black mb-3"><a href="#">When To Sell &amp; How Much To Sell?</a></h2>
@@ -493,7 +544,7 @@ IncludeTemplateLangFile(__FILE__);
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="300">
-          <a href="#"><img src="<?=SITE_TEMPLATE_PATH?>images/img_3.jpg" alt="Image" class="img-fluid"></a>
+          <a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/images/img_3.jpg" alt="Image" class="img-fluid"></a>
           <div class="p-4 bg-white">
             <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
             <h2 class="h5 text-black mb-3"><a href="#">When To Sell &amp; How Much To Sell?</a></h2>

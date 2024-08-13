@@ -86,9 +86,10 @@ $APPLICATION->SetTitle("Мебельная компания");
 	"bitrix:main.include",
 	"",
 	Array(
-		"AREA_FILE_SHOW" => "page",
+		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "standard.php"
+		"EDIT_TEMPLATE" => "standard.php",
+		"PATH" => "/include/logo.php"
 	)
 );?><br>
 </p>
