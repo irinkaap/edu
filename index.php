@@ -5,58 +5,69 @@ $APPLICATION->SetTitle("Мебельная компания");
  <br>
 </p>
 <p>
-	 2<?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	"obyavlenia_lenta",
-	Array(
+	 
+	 
+	 <?
+	 $GLOBALS['filter'] = array("PRIORITY"=>"Y");
+	 $APPLICATION->IncludeComponent(
+	"bitrix:news.line", 
+	"obyavlenia_lenta", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "300",
+		"CACHE_TIME" => "172 800",
 		"CACHE_TYPE" => "A",
 		"DETAIL_URL" => "/obyavleniya/#ELEMENT_CODE#",
-		"FIELD_CODE" => array(0=>"",1=>"",),
-		"IBLOCKS" => array(0=>"1",),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"IBLOCKS" => array(
+			0 => "1",
+		),
 		"IBLOCK_TYPE" => "ads",
 		"NEWS_COUNT" => "20",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC"
-	)
+		"SORT_ORDER2" => "ASC",
+		"COMPONENT_TEMPLATE" => "obyavlenia_lenta"
+	),
+	false
 );?>
 </p>
 <div class="slide-one-item home-slider owl-carousel">
-	<div class="site-blocks-cover" title="Код PHP: &lt;?=SITE_TEMPLATE_PATH?&gt;">
-		 <?=SITE_TEMPLATE_PATH?><span class="bxhtmled-surrogate-inner"><span class="bxhtmled-right-side-item-icon"></span><span class="bxhtmled-comp-lable" unselectable="on" spellcheck="false">Код PHP</span></span>/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5"&gt;
-		<div class="text">
-			<h2>853 S Lucerne Blvd</h2>
-			<p class="location">
- <span class="property-icon icon-room"></span> Los Angeles, CA 90005
-			</p>
-			<p class="mb-2">
- <strong>$2,250,500</strong>
-			</p>
-			<p class="mb-0">
- <a href="#" class="text-uppercase small letter-spacing-1 font-weight-bold">More Details</a>
-			</p>
-		</div>
-	</div>
-	<div class="site-blocks-cover" title="Код PHP: &lt;?=SITE_TEMPLATE_PATH?&gt;">
-		 <?=SITE_TEMPLATE_PATH?><span class="bxhtmled-surrogate-inner"><span class="bxhtmled-right-side-item-icon"></span><span class="bxhtmled-comp-lable" unselectable="on" spellcheck="false">Код PHP</span></span>/images/hero_bg_3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5"&gt;
-		<div class="text">
-			<h2>625 S. Berendo St</h2>
-			<p class="location">
- <span class="property-icon icon-room"></span>607 Los Angeles, CA 90005
-			</p>
-			<p class="mb-2">
- <strong>$2,250,500</strong>
-			</p>
-			<p class="mb-0">
- <a href="#" class="text-uppercase small letter-spacing-1 font-weight-bold">More Details</a>
-			</p>
-		</div>
-	</div>
-</div>
+
+    <div class="site-blocks-cover" style="background-image: url(/local/templates/home/images/hero_bg_1.jpg);" data-aos="fade"
+      data-stellar-background-ratio="0.5">
+
+      <div class="text">
+        <h2>853 S Lucerne Blvd</h2>
+        <p class="location"><span class="property-icon icon-room"></span> Los Angeles, CA 90005</p>
+        <p class="mb-2"><strong>$2,250,500</strong></p>
+
+
+        <p class="mb-0"><a href="#" class="text-uppercase small letter-spacing-1 font-weight-bold">More Details</a></p>
+
+      </div>
+    </div>
+
+    <div class="site-blocks-cover" style="background-image: url(/local/templates/home/images/hero_bg_3.jpg);" data-aos="fade"
+      data-stellar-background-ratio="0.5">
+
+      <div class="text">
+        <h2>625 S. Berendo St</h2>
+        <p class="location"><span class="property-icon icon-room"></span>607 Los Angeles, CA 90005</p>
+        <p class="mb-2"><strong>$2,250,500</strong></p>
+
+
+        <p class="mb-0"><a href="#" class="text-uppercase small letter-spacing-1 font-weight-bold">More Details</a></p>
+
+      </div>
+
+    </div>
+
+  </div>
 <div class="py-5">
 	<div class="container">
 		<div class="row">
@@ -122,23 +133,30 @@ $APPLICATION->SetTitle("Мебельная компания");
 		</div>
 
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	"obyavlenia_lenta",
-	Array(
+	"bitrix:news.line", 
+	"obyavlenia_lenta", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "300",
+		"CACHE_TIME" => "172 800",
 		"CACHE_TYPE" => "A",
 		"DETAIL_URL" => "/obyavleniya/#ELEMENT_CODE#",
-		"FIELD_CODE" => array(0=>"",1=>"",),
-		"IBLOCKS" => array(0=>"1",),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"IBLOCKS" => array(
+			0 => "1",
+		),
 		"IBLOCK_TYPE" => "ads",
 		"NEWS_COUNT" => "20",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC"
-	)
+		"SORT_ORDER2" => "ASC",
+		"COMPONENT_TEMPLATE" => "obyavlenia_lenta"
+	),
+	false
 );?>
 
 
@@ -320,8 +338,41 @@ $APPLICATION->SetTitle("Мебельная компания");
 		</div>
 	</div>
 </div>
+
+
+
+
+
 <div class="site-section">
 	<div class="container">
+
+
+	<p>
+	 <?$APPLICATION->IncludeComponent(
+	"bitrix:news.line",
+	"",
+	Array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "7 257 600",
+		"CACHE_TYPE" => "A",
+		"DETAIL_URL" => "",
+		"FIELD_CODE" => array("", ""),
+		"IBLOCKS" => array("6"),
+		"IBLOCK_TYPE" => "Servis",
+		"NEWS_COUNT" => "20",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC"
+	)
+);?><br>
+</p>
+<p>
+ <br>
+</p>
+<p>
+	
 		<div class="row justify-content-center">
 			<div class="col-md-7 text-center mb-5">
 				<div class="site-section-title">
@@ -383,6 +434,34 @@ $APPLICATION->SetTitle("Мебельная компания");
 </div>
 <div class="site-section bg-light">
 	<div class="container">
+
+
+
+	<p>
+	 <?$APPLICATION->IncludeComponent(
+	"bitrix:news.line",
+	"",
+	Array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "7 257 600",
+		"CACHE_TYPE" => "A",
+		"DETAIL_URL" => "",
+		"FIELD_CODE" => array("", ""),
+		"IBLOCKS" => array("6"),
+		"IBLOCK_TYPE" => "Servis",
+		"NEWS_COUNT" => "20",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC"
+	)
+);?><br>
+</p>
+<p>
+ <br>
+</p>
+<p>
 		<div class="row justify-content-center mb-5">
 			<div class="col-md-7 text-center">
 				<div class="site-section-title">

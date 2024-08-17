@@ -1,9 +1,10 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 
+
 <?if (!empty($arResult)):?>
 
-	<div class="site-menu js-clone-nav d-none d-lg-block">
+	<div class="col-4 col-md-4 col-lg-8">
             <nav class="site-navigation text-right text-md-right" role="navigation">
 
               <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
