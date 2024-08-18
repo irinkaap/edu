@@ -139,7 +139,7 @@ IncludeTemplateLangFile(__FILE__);
                   class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
 
-                    <!-- Верхнее меню -->
+                    <!-- Верхнее меню 
                     <ul class="site-menu js-clone-nav d-none d-lg-block"> 
                 <li class="active">
                   <a href="index.html">Home</a>
@@ -164,10 +164,12 @@ IncludeTemplateLangFile(__FILE__);
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
+-->
+
                     <p>
-                      <?$APPLICATION->IncludeComponent(
+      <?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
-	"Top_multi_1", 
+	"horizontal_multilevel1", 
 	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
@@ -180,7 +182,7 @@ IncludeTemplateLangFile(__FILE__);
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "top",
 		"USE_EXT" => "N",
-		"COMPONENT_TEMPLATE" => "Top_multi_1"
+		"COMPONENT_TEMPLATE" => "horizontal_multilevel1"
 	),
 	false
 );?><br>
