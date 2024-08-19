@@ -23,7 +23,7 @@
         <h2><?echo $arItem["NAME"]?></h2>
         <?echo $arItem["PREVIEW_TEXT"];?>
 
-		<p class="mb-0"><a href="<?$arItem["PROPERTIES"]['LINKS']['VALUE']?>" class="text-uppercase small letter-spacing-1 font-weight-bold">Подробнее</a></p>
+		<p class="mb-0"><a href="<?$arItem['DETAIL_URL']?>" class="text-uppercase small letter-spacing-1 font-weight-bold">Подробнее</a></p>
 
       </div>
     </div>

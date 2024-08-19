@@ -45,7 +45,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "10",
+		"NEWS_COUNT" => "1",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -58,9 +58,8 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
 			0 => "PRIORITY",
-			1 => "LINKS",
+			1 => "",
 			2 => "",
-			3 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
@@ -147,7 +146,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.line", 
-	"obyavlenia_lenta", 
+	"new_properties", 
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
@@ -155,205 +154,29 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"CACHE_TYPE" => "A",
 		"DETAIL_URL" => "/obyavleniya/#ELEMENT_CODE#",
 		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "PREVIEW_TEXT",
+			1 => "PREVIEW_PICTURE",
+			2 => "IBLOCK_NAME",
+			3 => "PROPERTY_AREAL",
+			4 => "PROPERTY_FLOORS",
+			5 => "PROPERTY_BATHROOMS",
+			6 => "PROPERTY_GARAGE",
 		),
 		"IBLOCKS" => array(
 			0 => "1",
 		),
+		
 		"IBLOCK_TYPE" => "ads",
 		"NEWS_COUNT" => "9",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"COMPONENT_TEMPLATE" => "obyavlenia_lenta"
+		"COMPONENT_TEMPLATE" => "new_properties"
 	),
 	false
 );?>
-
-
-		<div class="row mb-5">
-			<div class="col-md-6 col-lg-4 mb-4">
- <a href="property-details.html" class="prop-entry d-block"> <figure> <img alt="Image" src="/local/templates/home/images/img_1.jpg" class="img-fluid"> </figure>
-				<div class="prop-text">
-					<div class="inner">
- <span class="price rounded">$1,930,000</span>
-						<h3 class="title">853 S Lucerne Blvd</h3>
-						<p class="location">
-							 Los Angeles, CA 90005
-						</p>
-					</div>
-					<div class="prop-more-info">
-						<div class="inner d-flex">
-							<div class="col">
-								 Area: <strong>240m<sup>2</sup></strong>
-							</div>
-							<div class="col">
-								 Beds: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Baths: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Garages: <strong>1</strong>
-							</div>
-						</div>
-					</div>
-				</div>
- </a>
-			</div>
-			<div class="col-md-6 col-lg-4 mb-4">
- <a href="property-details.html" class="prop-entry d-block"> <figure> <img alt="Image" src="/local/templates/home/images/img_2.jpg" class="img-fluid"> </figure>
-				<div class="prop-text">
-					<div class="inner">
- <span class="price rounded">$2,438,000</span>
-						<h3 class="title">853 S Lucerne Blvd</h3>
-						<p class="location">
-							 Los Angeles, CA 90005
-						</p>
-					</div>
-					<div class="prop-more-info">
-						<div class="inner d-flex">
-							<div class="col">
-								 Area: <strong>240m<sup>2</sup></strong>
-							</div>
-							<div class="col">
-								 Beds: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Baths: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Garages: <strong>1</strong>
-							</div>
-						</div>
-					</div>
-				</div>
- </a>
-			</div>
-			<div class="col-md-6 col-lg-4 mb-4">
- <a href="property-details.html" class="prop-entry d-block"> <figure> <img alt="Image" src="/local/templates/home/images/img_3.jpg" class="img-fluid"> </figure>
-				<div class="prop-text">
-					<div class="inner">
- <span class="price rounded">$5,320,000</span>
-						<h3 class="title">853 S Lucerne Blvd</h3>
-						<p class="location">
-							 Los Angeles, CA 90005
-						</p>
-					</div>
-					<div class="prop-more-info">
-						<div class="inner d-flex">
-							<div class="col">
-								 Area: <strong>240m<sup>2</sup></strong>
-							</div>
-							<div class="col">
-								 Beds: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Baths: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Garages: <strong>1</strong>
-							</div>
-						</div>
-					</div>
-				</div>
- </a>
-			</div>
-			<div class="col-md-6 col-lg-4 mb-4">
- <a href="property-details.html" class="prop-entry d-block"> <figure> <img alt="Image" src="/local/templates/home/images/img_4.jpg" class="img-fluid"> </figure>
-				<div class="prop-text">
-					<div class="inner">
- <span class="price rounded">$2,350,000</span>
-						<h3 class="title">853 S Lucerne Blvd</h3>
-						<p class="location">
-							 Los Angeles, CA 90005
-						</p>
-					</div>
-					<div class="prop-more-info">
-						<div class="inner d-flex">
-							<div class="col">
-								 Area: <strong>240m<sup>2</sup></strong>
-							</div>
-							<div class="col">
-								 Beds: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Baths: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Garages: <strong>1</strong>
-							</div>
-						</div>
-					</div>
-				</div>
- </a>
-			</div>
-			<div class="col-md-6 col-lg-4 mb-4">
- <a href="property-details.html" class="prop-entry d-block"> <figure> <img alt="Image" src="/local/templates/home/images/img_5.jpg" class="img-fluid"> </figure>
-				<div class="prop-text">
-					<div class="inner">
- <span class="price rounded">$1,550,000</span>
-						<h3 class="title">853 S Lucerne Blvd</h3>
-						<p class="location">
-							 Los Angeles, CA 90005
-						</p>
-					</div>
-					<div class="prop-more-info">
-						<div class="inner d-flex">
-							<div class="col">
-								 Area: <strong>240m<sup>2</sup></strong>
-							</div>
-							<div class="col">
-								 Beds: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Baths: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Garages: <strong>1</strong>
-							</div>
-						</div>
-					</div>
-				</div>
- </a>
-			</div>
-			<div class="col-md-6 col-lg-4 mb-4">
- <a href="property-details.html" class="prop-entry d-block"> <figure> <img alt="Image" src="/local/templates/home/images/img_6.jpg" class="img-fluid"> </figure>
-				<div class="prop-text">
-					<div class="inner">
- <span class="price rounded">$4,291,000</span>
-						<h3 class="title">853 S Lucerne Blvd</h3>
-						<p class="location">
-							 Los Angeles, CA 90005
-						</p>
-					</div>
-					<div class="prop-more-info">
-						<div class="inner d-flex">
-							<div class="col">
-								 Area: <strong>240m<sup>2</sup></strong>
-							</div>
-							<div class="col">
-								 Beds: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Baths: <strong>2</strong>
-							</div>
-							<div class="col">
-								 Garages: <strong>1</strong>
-							</div>
-						</div>
-					</div>
-				</div>
- </a>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
+</div></div>
 
 
 <div class="site-section">
@@ -388,6 +211,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 	false
 );?><br>
 </p>
+</div>
 <p>
  <br>
 </p>
